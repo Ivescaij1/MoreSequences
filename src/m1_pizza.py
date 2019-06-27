@@ -9,7 +9,6 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
          their colleagues and Junfei Cai.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-import rosegraphics as rg
 import math
 
 
