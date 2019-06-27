@@ -247,6 +247,9 @@ def draw_points_on_circle(window, circle, number_of_points, color):
         points = rg.Circle(center[k], 10)
         points.fill_color = color
 
+        if center[k] is isinstance(object, shape):
+            x = center[k]//2
+            print(x)
         points.attach_to(window)
 
         window.render()
