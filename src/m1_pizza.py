@@ -231,7 +231,7 @@ def draw_points_on_circle(window, circle, number_of_points, color):
       :type color:            str
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
@@ -247,7 +247,6 @@ def draw_points_on_circle(window, circle, number_of_points, color):
         points = rg.Circle(center[k], 10)
         points.fill_color = color
 
-        center[]
         points.attach_to(window)
 
         window.render()
