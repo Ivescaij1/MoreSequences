@@ -27,8 +27,8 @@ def main():
     #     4. When satisfied with your work, move onto the next test.
     # ------------------------------------------------------------------
 
-    run_test_generate_points_on_circle()
-    # run_test_draw_points_on_circle()
+    # run_test_generate_points_on_circle()
+    run_test_draw_points_on_circle()
     # run_test_pizza()
     # run_test_polygon()
     # run_test_fancy_polygon()
@@ -190,7 +190,8 @@ def run_test_draw_points_on_circle():
     title = 'DRAW_POINTS_ON_CIRCLE, test 4:  16 red dots.'
     window = rg.RoseWindow(400, 400, title)
     circle = rg.Circle(rg.Point(200, 200), 150)
-    draw_points_on_circle(window, circle, 16, 'red')
+    circle.fill_color = 'black'
+    draw_points_on_circle(window, circle, 60, 'red')
     window.close_on_mouse_click()
 
 
@@ -239,6 +240,17 @@ def draw_points_on_circle(window, circle, number_of_points, color):
     #
     # Your professor may do this exercise with you as "live coding".
     # ------------------------------------------------------------------
+    center = generate_points_on_circle(circle, number_of_points)
+    circle.attach_to(window)
+
+    for k in range(len(center)):
+        points = rg.Circle(center[k], 10)
+        points.fill_color = color
+
+        center[]
+        points.attach_to(window)
+
+        window.render()
 
 
 def run_test_pizza():
