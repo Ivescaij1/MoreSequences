@@ -9,6 +9,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
          their colleagues and Junfei Cai.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+import rosegraphics as rg
 import math
 
 
@@ -247,6 +248,7 @@ def draw_points_on_circle(window, circle, number_of_points, color):
         points.fill_color = color
 
         points.attach_to(window)
+        center[k].attach_to(window)
 
         window.render()
 
