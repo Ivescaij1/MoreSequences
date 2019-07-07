@@ -507,11 +507,11 @@ def run_test_fancy_polygon():
     #   a contrasting color for the lines makes them especially pretty.
     # ------------------------------------------------------------------
     title = 'FANCY POLYGON test 4:  20 lime green lines on blue circle, hops = 7.'
-    window = rg.RoseWindow(480, 350, title)
+    window = rg.RoseWindow(500, 500, title)
 
-    circle = rg.Circle(rg.Point(240, 165), 150)
+    circle = rg.Circle(rg.Point(250, 250), 250)
     circle.fill_color = 'blue'
-    fancy_polygon(window, circle, 20, 7, 'lime green', 5)
+    fancy_polygon(window, circle, 200, 50, 'yellow', 2)
     window.close_on_mouse_click()
 
 
