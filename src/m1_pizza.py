@@ -361,7 +361,7 @@ def pizza(window, circle, number_of_slices, color, thickness):
 def run_test_polygon():
     """ Tests the   polygon   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this TEST function.
+    # DONE: 7. Implement this TEST function.
     #   It TESTS the   polygon   function defined below.
     #   Include at least ** 1 ** ADDITIONAL test (that YOU write).
     #
@@ -434,7 +434,7 @@ def polygon(window, circle, number_of_segments, color, thickness):
       :type thickness:          int
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
@@ -446,10 +446,13 @@ def polygon(window, circle, number_of_segments, color, thickness):
     ends = generate_points_on_circle(circle, number_of_segments)
 
     for k in range(len(ends)):
-        lines = rg.Line(circle.center, ends[k])
+        if k < (len(ends) - 1):
+            lines = rg.Line(ends[k], ends[k+1])
+        else:
+            lines = rg.Line(ends[k], ends[0])
+
         lines.color = color
         lines.thickness = thickness
-
         lines.attach_to(window)
 
         window.render()
